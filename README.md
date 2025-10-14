@@ -1,100 +1,137 @@
-Building and Deploying Applications Seamlessly with Google App Engine
-This repository contains the source code and configuration files for the presentation, "Building and Deploying Applications Seamlessly with Google App Engine." It serves as a practical, hands-on guide for deploying a Python web application to the cloud.
+# Building and Deploying Applications Seamlessly with Google App Engine
 
-Presented By
-[Your Name]
+This repository contains the source code and configuration files for the presentation, **"Building and Deploying Applications Seamlessly with Google App Engine."** It serves as a practical, hands-on guide for deploying a Python web application to the cloud.
 
-Title: [Your Title, e.g., Cloud Engineer, Developer Advocate]
+---
 
-Contact: [Your Email, LinkedIn, or Twitter Handle]
+## 👨‍🏫 Presented By
 
-[Co-Presenter Name, if any]
+**Name:** [Your Name]  
+**Title:** [Your Title, e.g., Cloud Engineer, Developer Advocate]  
+**Contact:** [Your Email, LinkedIn, or Twitter Handle]
 
-Title: [Their Title]
+**Co-Presenter:** [Co-Presenter Name, if any]  
+**Title:** [Their Title]  
+**Contact:** [Their Contact Info]
 
-Contact: [Their Contact Info]
+**Presentation SLides**: https://bit.ly/AppEngine2025
 
-About This Project
-This repository is designed to be a "true" project resource. It's more than just code; it includes:
+---
 
-Clear Documentation: Step-by-step instructions to ensure you can run the demos yourself.
+## 📘 About This Project
 
-Two Deployment Strategies: Code for both the Standard and Flexible environments, allowing you to compare the two directly.
+This repository is designed to be a **true project resource** — it’s more than just code. It includes:
 
-Best Practices: Includes a .gitignore file and a structured layout, just like a real-world project.
+- **Clear Documentation:** Step-by-step instructions to ensure you can run the demos yourself.  
+- **Two Deployment Strategies:** Code for both the Standard and Flexible environments, allowing direct comparison.  
+- **Best Practices:** Includes a `.gitignore` file and a structured layout like a real-world project.
 
-The Application: A Number Guessing Game
-To make the demonstration engaging, the application is a simple and interactive number guessing game built with Python and Flask. The game:
+---
 
-Generates a random number between 1 and 100.
+## 🎯 The Application: A Number Guessing Game
 
-Prompts the user to guess the number.
+To make the demonstration engaging, the application is a simple and interactive **number guessing game** built with Python and Flask.  
+The game:
 
-Provides feedback ("Too high" or "Too low").
+- Generates a random number between **1 and 100**.
+- Prompts the user to guess the number.
+- Provides feedback ("Too high" or "Too low").
+- Congratulates the user upon a correct guess and shows the number of attempts.
 
-Congratulates the user upon a correct guess and shows the number of attempts.
+This simple application is perfect for demonstrating core deployment concepts without complex code.
 
-This simple application is perfect for demonstrating core deployment concepts without getting bogged down in complex code.
+---
 
-Deployment Guide
-Follow these steps to deploy the application to your own Google Cloud project.
+## 🗂️ Project Folder Structure
 
-Part 1: Initial Cloud Setup (Do this once)
-Before deploying, you need to configure your Google Cloud environment.
+```bash
+app-engine-demo/
+│
+├── standard-environment-demo/
+│   ├── main.py
+│   ├── app.yaml
+│   ├── requirements.txt
+│   └── templates/
+│       └── index.html
+│
+├── flexible-environment-demo/
+│   ├── main.py
+│   ├── app.yaml
+│   ├── Dockerfile
+│   ├── requirements.txt
+│   └── templates/
+│       └── index.html
+│
+├── .gitignore
+└── README.md
+```
 
-Create a Project: Go to the Google Cloud Console and create a new project.
+---
 
-Enable Billing: Ensure billing is enabled for your project. The App Engine free tier is generous, but billing is required.
+## 🚀 Deployment Guide
 
-Enable APIs: In the Cloud Console, search for and enable the App Engine Admin API and Cloud Build API.
+### **Part 1: Initial Cloud Setup (Do this once)**
+Before deploying, configure your Google Cloud environment.
 
-Install Google Cloud CLI: Install the Google Cloud CLI on your local machine.
+1. **Create a Project:** Go to the Google Cloud Console and create a new project.  
+2. **Enable Billing:** Ensure billing is enabled for your project (App Engine free tier is generous but requires billing).  
+3. **Enable APIs:** In the Cloud Console, enable the **App Engine Admin API** and **Cloud Build API**.  
+4. **Install Google Cloud CLI:** Install the CLI on your local machine.  
+5. **Initialize the CLI:**
+   ```bash
+   gcloud init
+   ```
+   Follow prompts to log in, select your project, and choose a default region for App Engine.
 
-Initialize the CLI: Open your terminal and run gcloud init. Follow the prompts to log in, select the project you just created, and choose a default region for App Engine when prompted.
+---
 
-Part 2: Demo 1 - Deploying to the Standard Environment
-The Standard environment is ideal for rapid development and applications that can benefit from scaling to zero.
+### **Part 2: Demo 1 - Deploying to the Standard Environment**
+The **Standard Environment** is ideal for rapid development and scaling to zero.
 
-Navigate to the correct directory:
+1. Navigate to the correct directory:
+   ```bash
+   cd standard-environment-demo
+   ```
+2. Deploy the application:
+   ```bash
+   gcloud app deploy
+   ```
+3. Confirm and wait for deployment.
+4. View your live app:
+   ```bash
+   gcloud app browse
+   ```
 
-cd standard-environment-demo
+---
 
-Deploy the application:
-Run the deployment command. Google Cloud will automatically detect the app.yaml file, package your code, and deploy it.
+### **Part 3: Demo 2 - Deploying to the Flexible Environment**
+The **Flexible Environment** uses Docker containers for full control over the runtime.
 
-gcloud app deploy
+1. Navigate to the flexible environment directory:
+   ```bash
+   cd ../flexible-environment-demo
+   ```
+2. Deploy the application:
+   ```bash
+   gcloud app deploy
+   ```
+3. Confirm and wait — this will take longer as Docker images are built.
+4. View your live app:
+   ```bash
+   gcloud app browse
+   ```
 
-Confirm and Wait: You will be prompted to confirm the deployment. Type Y and press Enter. The process should take a few minutes.
+You’ve now successfully deployed the same application to two different App Engine environments!
 
-View your live application:
-Once the deployment is complete, run the following command to open the application in your web browser:
+---
 
-gcloud app browse
+## 🤝 Contributing
 
-Part 3: Demo 2 - Deploying to the Flexible Environment
-The Flexible environment uses Docker containers, giving you more control over the runtime and system dependencies.
+Contributions are welcome! Feel free to open a pull request with improvements or suggestions for the code or documentation.
 
-Navigate to the correct directory:
-From the root of the project, navigate to the flexible-environment-demo folder.
+---
 
-cd ../flexible-environment-demo
+## 📄 License
 
-Deploy the application:
-The command is the same. Cloud Build will now use the Dockerfile to build a container image before deploying it.
+This project is licensed under the **MIT License**.
 
-gcloud app deploy
-
-Confirm and Wait: This deployment will take longer than the standard environment because it has to build the Docker container and provision the underlying virtual machine resources.
-
-View your live application:
-Once complete, run the same command to see your live application:
-
-gcloud app browse
-
-You have now successfully deployed the same application to two different App Engine environments!
-
-Contributing
-Contributions are welcome! If you have suggestions for improving the code or the documentation, please feel free to open a pull request.
-
-License
-This project is licensed under the MIT License.

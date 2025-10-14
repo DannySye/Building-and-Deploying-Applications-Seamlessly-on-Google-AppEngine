@@ -1,0 +1,3 @@
+Flask==2.2.2
+#We must include gunicorn because we are defining the runtime ourselves.
+gunicorn==20.1.0

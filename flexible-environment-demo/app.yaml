@@ -1,0 +1,11 @@
+runtime: custom
+#'custom' indicates that we will provide our own runtime via a Dockerfile.
+
+env: flex
+
+#Optional: You can uncomment and configure the resources for the VMs
+#that will run your container.
+#resources:
+#cpu: 1
+#memory_gb: 0.5
+#disk_size_gb: 10

@@ -14,7 +14,7 @@ This repository contains the source code and configuration files for the present
 
 **Contact:** ubatamyeonline@gmail.com
 
-**Presentation SLides**: https://bit.ly/AppEngine2025
+**Presentation Slides**: https://bit.ly/AppEngine2025
 
 ---
 

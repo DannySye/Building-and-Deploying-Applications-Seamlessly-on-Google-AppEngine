@@ -6,13 +6,11 @@ This repository contains the source code and configuration files for the present
 
 ## 👨‍🏫 Presented By
 
-**Name:** [Your Name]  
-**Title:** [Your Title, e.g., Cloud Engineer, Developer Advocate]  
-**Contact:** [Your Email, LinkedIn, or Twitter Handle]
+**Name:** Daniel Mwiine 
+**Contact:** syemwayne1122@gmail.com
 
-**Co-Presenter:** [Co-Presenter Name, if any]  
-**Title:** [Their Title]  
-**Contact:** [Their Contact Info]
+**Co-Presenter:** Batamye Umar 
+**Contact:** ubatamyeonline@gmail.com
 
 **Presentation SLides**: https://bit.ly/AppEngine2025
 

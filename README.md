@@ -51,16 +51,13 @@ app-engine-demo/
 │   ├── main.py
 │   ├── app.yaml
 │   ├── requirements.txt
-│   └── templates/
-│       └── index.html
+│
 │
 ├── flexible-environment-demo/
 │   ├── main.py
 │   ├── app.yaml
 │   ├── Dockerfile
 │   ├── requirements.txt
-│   └── templates/
-│       └── index.html
 │
 ├── .gitignore
 └── README.md

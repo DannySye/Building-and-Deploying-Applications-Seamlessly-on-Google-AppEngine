@@ -6,10 +6,10 @@ This repository contains the source code and configuration files for the present
 
 ## 👨‍🏫 Presented By
 
-**Name:** Daniel Mwiine 
+**Name:** Daniel Mwiine
 **Contact:** syemwayne1122@gmail.com
 
-**Co-Presenter:** Batamye Umar 
+**Co-Presenter:** Batamye Umar
 **Contact:** ubatamyeonline@gmail.com
 
 **Presentation SLides**: https://bit.ly/AppEngine2025

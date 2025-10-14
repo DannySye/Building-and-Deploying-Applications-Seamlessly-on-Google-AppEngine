@@ -51,14 +51,11 @@ app-engine-demo/
 │   ├── main.py
 │   ├── app.yaml
 │   ├── requirements.txt
-│
-│
 ├── flexible-environment-demo/
 │   ├── main.py
 │   ├── app.yaml
 │   ├── Dockerfile
 │   ├── requirements.txt
-│
 ├── .gitignore
 └── README.md
 ```

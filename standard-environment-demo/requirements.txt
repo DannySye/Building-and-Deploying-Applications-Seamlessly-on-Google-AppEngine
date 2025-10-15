@@ -1,2 +1,1 @@
-#Gunicorn is not needed here as it's provided by the managed runtime.
-Flask==2.2.2
+Flask

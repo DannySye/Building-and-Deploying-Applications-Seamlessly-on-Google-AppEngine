@@ -1,7 +1,7 @@
 # Dockerfile for the Flexible Environment
 
 # Use an official lightweight Python runtime as a parent image.
-FROM python:3.13-slim
+FROM python:3.14-slim
 
 # Set the working directory inside the container to /app.
 WORKDIR /app
@@ -19,4 +19,4 @@ COPY . .
 # Gunicorn is a production-ready web server.
 # App Engine will set the $PORT environment variable, which gunicorn will use.
 # We bind to 0.0.0.0 to accept connections from outside the container.
-CMD ["python3", "main.py"]
+CMD ["gunicorn", "--bind", "0.0.0.0:8080", "main:app"]

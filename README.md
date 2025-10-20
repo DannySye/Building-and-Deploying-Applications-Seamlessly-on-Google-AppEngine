@@ -12,8 +12,7 @@ This repository contains the source code and configuration files for the present
 **Co-Presenter:** Batamye Umar
 **Contact:** ubatamyeonline@gmail.com
 
-**Presentation Slides**: https://bit.ly/AppEngine2025
-
+**Presentation Slides**: https://bit.ly/DevFestJinjaSlides
 ---
 
 ## 📘 About This Project
